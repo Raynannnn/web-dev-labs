@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Act 3 | Lab 7 - Flexbox Cards</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap; /* para responsive */
+      flex: 1;
+    }
+
+    .card {
+      background: #f0f8ff;
+      color: #333;
+      width: 250px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+      color: #1e3c72;
+    }
+
+    .card p {
+      padding: 0 15px 15px;
+      font-size: 14px;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    /* Footer style */
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      margin-top: 30px;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    footer a {
+      color: #ffcc00;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: #ffffff;
+    }
+
+    /* Animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2>(Act 3 | Lab 7)</h2>
+
+  <div class="card-container">
+    <div class="card">
+      <img src="https://via.placeholder.com/250x180" alt="Profile 1">
+      <h3>Joses Gidayawan</h3>
+      <p>A student who loves books and writing. Passionate about stories and creative ideas.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/250x180" alt="Profile 2">
+      <h3>Raynan</h3>
+      <p>Who loves coding, games, and anime. Always exploring new tech and creative projects.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/250x180" alt="Profile 3">
+      <h3>Friend Namin</h3>
+      <p>Enjoys learning and working on simple web projects. Dreams of becoming a developer.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Raynan's Travel Blog. All rights reserved. <br>
+    Follow me on 
+    <a href="https://www.instagram.com/raynan_mrc?igsh=YXM1dTFqaGhrdXJ5" target="_blank">Instagram</a> <br>
+    Powered by: Raynan Marciales
+  </footer>
+</body>
+</html>
