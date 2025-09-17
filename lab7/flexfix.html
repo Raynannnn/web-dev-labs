@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Fix ( Act 1) - Lab 7</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #2b5876, #4e4376); /* Blue aesthetic */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;           /* Fix 1 */
+      justify-content: space-around; /* Fix 2 */
+      gap: 15px;
+      width: 80%;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background: #4da6ff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: white;
+      transition: transform 0.3s ease;
+    }
+
+    .box:hover {
+      transform: scale(1.1);
+      background: #1e90ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">Box A</div>
+    <div class="box">Box B</div>
+    <div class="box">Box C</div>
+  </div>
+</body>
+</html>

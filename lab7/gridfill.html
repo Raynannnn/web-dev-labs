@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid Fill - Lab 7</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(to right, #1e3c72, #2a5298); /* Blue gradient */
+      color: white;
+    }
+
+    .grid-container {
+      display: grid; /* Fill 1 */
+      grid-template-columns: repeat(3, 1fr); /* Fill 2 - 3 equal columns */
+      gap: 15px; /* Fill 3 */
+    }
+
+    .grid-item {
+      background-color: #4da6ff; /* Fill 4 - light blue */
+      padding: 20px; /* Fill 5 */
+      text-align: center; /* Fill 6 */
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+
+    .grid-item:hover {
+      transform: scale(1.05);
+      background-color: #1e90ff;
+    }
+  </style>
+</head>
+<body>
+  <h2>Simple CSS Grid Layout</h2>
+  <div class="grid-container">
+    <div class="grid-item">Item 1</div>
+    <div class="grid-item">Item 2</div>
+    <div class="grid-item">Item 3</div>
+    <div class="grid-item">Item 4</div>
+    <div class="grid-item">Item 5</div>
+    <div class="grid-item">Item 6</div>
+  </div>
+</body>
+</html>
