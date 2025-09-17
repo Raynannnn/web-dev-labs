@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Basics - Lab 7</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to right, #1e3c72, #2a5298); /* Blue gradient */
+    }
+
+    .container {
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      gap: 20px; /* Space between boxes */
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background: #4da6ff; /* Light blue */
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: transform 0.3s ease;
+    }
+
+    .box:hover {
+      transform: scale(1.1);
+      background: #1e90ff; /* Darker blue on hover */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+</body>
+</html>
