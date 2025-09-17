@@ -1,44 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Box Styling Activity</title>
-    <style>
-        body {
-            background-color: #f4f4f4;
-            font-family: Verdana, sans-serif;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 30px;
-        }
-        .box {
-            width: 250px;
-            padding: 20px;
-            background-color: #fff;
-            border: 3px solid #333;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-        .box h2 {
-            color: #333;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Act 4 | Lab 7 - Grid Page Layout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f5f6fa;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .box {
+      padding: 20px;
+      color: #333;
+    }
+
+    .box1 {
+      background-color: #ffeaa7;
+      border: 2px solid #fdcb6e;
+      border-radius: 10px;
+    }
+
+    .box2 {
+      background-color: #a29bfe;
+      border: 3px dashed #6c5ce7;
+      border-radius: 15px;
+    }
+
+    .box3 {
+      background-color: #81ecec;
+      border: 4px dotted #00cec9;
+      border-radius: 20px;
+    }
+  </style>
 </head>
 <body>
-    <div class="box">
-        <h2>Box 1</h2>
-        <p>This is the first styled box.</p>
+  <h2>Act 4 | Lab 7 - Grid Page Layout</h2>
+
+  <div class="grid-container">
+    <div class="box box1">
+      <h3>Box 1</h3>
+      <p>This is the first content box with a solid border and rounded corners.</p>
     </div>
-    <div class="box">
-        <h2>Box 2</h2>
-        <p>This is the second styled box.</p>
+
+    <div class="box box2">
+      <h3>Box 2</h3>
+      <p>This is the second content box with a dashed border and different styling.</p>
     </div>
-    <div class="box">
-        <h2>Box 3</h2>
-        <p>This is the third styled box.</p>
+
+    <div class="box box3">
+      <h3>Box 3</h3>
+      <p>This is the third content box with a dotted border and more rounded corners.</p>
     </div>
+  </div>
 </body>
 </html>
