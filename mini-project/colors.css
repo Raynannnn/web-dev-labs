@@ -1,0 +1,23 @@
+
+input[type="radio"] {
+  display: none;
+}
+
+body.colors {
+  background: linear-gradient(135deg, #1e1e2f, #2a2a72);
+}
+
+
+#blue:checked ~ body.colors {
+  background: linear-gradient(135deg, #1e1e2f, #2a2a72);
+}
+
+
+#green:checked ~ body.colors {
+  background: linear-gradient(135deg, #1e3c2f, #2a722a);
+}
+
+
+#purple:checked ~ body.colors {
+  background: linear-gradient(135deg, #2a1e3c, #722a72);
+}
