@@ -5,21 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mini Project | Raynan</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="theme.css">
 </head>
-<body class="landing">
+<body>
 
-  <div class="welcome">
+  <!-- Background Animation -->
+  <div class="bubbles">
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+  </div>
+
+  <!-- Sidebar Menu -->
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-btn">☰</label>
+  
+  <nav class="sidebar">
+    <h2>Navigation</h2>
+    <a href="#welcome">🏠 Home</a>
+    <a href="#colors">🎨 Colors</a>
+    <a href="#typography">🔤 Typography</a>
+    <a href="#layout">📐 Layout</a>
+  </nav>
+
+  <!-- Welcome Section -->
+  <section id="welcome" class="section">
     <h1 class="fade-text">Welcome to My Mini Project</h1>
     <p class="fade-text">By: Raynan A. Marciales | BSIE-ICT 3A-M</p>
     <p class="fade-text">Submitted to: Michael Serrano</p>
+  </section>
 
-    <div class="nav-buttons">
-      <a href="colors.html" class="btn">🎨 Colors</a>
-      <a href="typography.html" class="btn">🔤 Typography</a>
-      <a href="layout.html" class="btn">📐 Layout</a>
+  <!-- Color Section -->
+  <section id="colors" class="section">
+    <h2>🎨 Color Playground</h2>
+    <p>Choose a theme color below:</p>
+    <div class="theme-buttons">
+      <input type="radio" name="theme" id="blue" checked>
+      <label for="blue" class="btn">Blue</label>
+      <input type="radio" name="theme" id="green">
+      <label for="green" class="btn">Green</label>
+      <input type="radio" name="theme" id="violet">
+      <label for="violet" class="btn">Violet</label>
     </div>
-  </div>
+  </section>
 
+  <!-- Typography Section -->
+  <section id="typography" class="section">
+    <h2>🔤 Typography Showcase</h2>
+    <p class="serif">This is Serif Font</p>
+    <p class="sans-serif">This is Sans-serif Font</p>
+    <p class="shadow">This has Shadow</p>
+    <p class="spaced">This has Letter Spacing</p>
+    <p class="transform">This is UPPERCASE</p>
+  </section>
+
+  <!-- Layout Section -->
+  <section id="layout" class="section">
+    <h2>📐 Layout Demo</h2>
+    <div class="flex-container">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+    </div>
+    <div class="grid-container">
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+      <div class="box">D</div>
+    </div>
+  </section>
+
+ 
   <footer>
     <p>Powered by: Raynan Medyo Pogi | Made by: Rai rai (raynan) gpt</p>
   </footer>
