@@ -1,23 +1,11 @@
 
-input[type="radio"] {
-  display: none;
-}
-
-body.colors {
-  background: linear-gradient(135deg, #1e1e2f, #2a2a72);
-}
+#home { background: linear-gradient(120deg, #1e3c72, #2a5298); }
+#colors { background: linear-gradient(120deg, #4a00e0, #8e2de2); }
+#typography { background: linear-gradient(120deg, #ff512f, #dd2476); }
+#layout { background: linear-gradient(120deg, #232526, #414345); }
 
 
-#blue:checked ~ body.colors {
-  background: linear-gradient(135deg, #1e1e2f, #2a2a72);
-}
-
-
-#green:checked ~ body.colors {
-  background: linear-gradient(135deg, #1e3c2f, #2a722a);
-}
-
-
-#purple:checked ~ body.colors {
-  background: linear-gradient(135deg, #2a1e3c, #722a72);
-}
+.theme.blue { background: #2196f3; color: white; }
+.theme.violet { background: #8e24aa; color: white; }
+.theme.pink { background: #e91e63; color: white; }
+.theme.dark { background: #212121; color: white; }

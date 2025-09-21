@@ -3,82 +3,141 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mini Project | Raynan</title>
+  <title>Graphic Design Hub | Created by Raynan Marciales</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="theme.css">
 </head>
 <body>
+  
+  <!-- Scroll Hint -->
+  <div class="scroll-hint">⬇ Scroll down to explore the design prototype ⬇</div>
 
-  <!-- Background Animation -->
-  <div class="bubbles">
-    <span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span>
+  <!-- Background -->
+  <div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
   </div>
 
-  <!-- Sidebar Menu -->
+  <!-- Sidebar -->
   <input type="checkbox" id="menu-toggle">
-  <label for="menu-toggle" class="menu-btn">☰</label>
-  
+  <label for="menu-toggle" class="menu-icon">&#9776;</label>
   <nav class="sidebar">
-    <h2>Navigation</h2>
-    <a href="#welcome">🏠 Home</a>
-    <a href="#colors">🎨 Colors</a>
-    <a href="#typography">🔤 Typography</a>
-    <a href="#layout">📐 Layout</a>
+    <ul>
+      <li><a href="#home">🏠 Home</a></li>
+      <li><a href="#colors">🎨 Colors</a></li>
+      <li><a href="#typography">🔤 Typography</a></li>
+      <li><a href="#layout">📐 Layout</a></li>
+      <li><a href="#gallery">🖼 Gallery</a></li>
+      <li><a href="#tools">⚡ Tools</a></li>
+      <li><a href="#contact">📞 Contact</a></li>
+    </ul>
   </nav>
 
-  <!-- Welcome Section -->
-  <section id="welcome" class="section">
-    <h1 class="fade-text">Welcome to My Mini Project</h1>
-    <p class="fade-text">By: Raynan A. Marciales | BSIE-ICT 3A-M</p>
-    <p class="fade-text">Submitted to: Michael Serrano</p>
-  </section>
+  <main>
+    <!-- Home -->
+    <section id="home" class="panel">
+      <div class="glass content animate">
+        <h1>Welcome to My Graphic Design Hub</h1>
+        <p>By: <b>Raynan A Marciales</b><br>
+          From: <b>BSIE-ICT 3A-M</b><br>
+          Submitted to: <b>Michael Serrano</b>
+        </p>
+      </div>
+    </section>
 
-  <!-- Color Section -->
-  <section id="colors" class="section">
-    <h2>🎨 Color Playground</h2>
-    <p>Choose a theme color below:</p>
-    <div class="theme-buttons">
-      <input type="radio" name="theme" id="blue" checked>
-      <label for="blue" class="btn">Blue</label>
-      <input type="radio" name="theme" id="green">
-      <label for="green" class="btn">Green</label>
-      <input type="radio" name="theme" id="violet">
-      <label for="violet" class="btn">Violet</label>
-    </div>
-  </section>
+    <!-- Colors -->
+    <section id="colors" class="panel">
+      <div class="glass content animate">
+        <h2>Color Themes</h2>
+        <p>Pick your vibe and see the magic:</p>
+        <div class="color-buttons">
+          <a href="#popup"><button class="theme blue">Blue</button></a>
+          <a href="#popup"><button class="theme violet">Violet</button></a>
+          <a href="#popup"><button class="theme pink">Pink</button></a>
+          <a href="#popup"><button class="theme dark">Dark</button></a>
+        </div>
+      </div>
+    </section>
 
-  <!-- Typography Section -->
-  <section id="typography" class="section">
-    <h2>🔤 Typography Showcase</h2>
-    <p class="serif">This is Serif Font</p>
-    <p class="sans-serif">This is Sans-serif Font</p>
-    <p class="shadow">This has Shadow</p>
-    <p class="spaced">This has Letter Spacing</p>
-    <p class="transform">This is UPPERCASE</p>
-  </section>
+    <!-- Typography -->
+    <section id="typography" class="panel">
+      <div class="glass content animate">
+        <h2>Typography</h2>
+        <p class="typo1">Heading Style One</p>
+        <p class="typo2">Typography adds personality.</p>
+        <p class="typo3">Fonts create hierarchy & focus.</p>
+      </div>
+    </section>
 
-  <!-- Layout Section -->
-  <section id="layout" class="section">
-    <h2>📐 Layout Demo</h2>
-    <div class="flex-container">
-      <div class="box">Box 1</div>
-      <div class="box">Box 2</div>
-      <div class="box">Box 3</div>
-    </div>
-    <div class="grid-container">
-      <div class="box">A</div>
-      <div class="box">B</div>
-      <div class="box">C</div>
-      <div class="box">D</div>
-    </div>
-  </section>
+    <!-- Layout -->
+    <section id="layout" class="panel">
+      <div class="glass content animate">
+        <h2>Layout</h2>
+        <p>Balance, alignment, and spacing make designs professional.</p>
+        <div class="grid-demo">
+          <a href="#popup"><div class="box">A</div></a>
+          <a href="#popup"><div class="box">B</div></a>
+          <a href="#popup"><div class="box">C</div></a>
+          <a href="#popup"><div class="box">D</div></a>
+        </div>
+      </div>
+    </section>
 
- 
+    <!-- Gallery -->
+    <section id="gallery" class="panel">
+      <div class="glass content animate">
+        <h2>Design Gallery</h2>
+        <div class="gallery-grid">
+          <a href="#popup"><div class="card">🎨 Poster</div></a>
+          <a href="#popup"><div class="card">📱 UI Mockup</div></a>
+          <a href="#popup"><div class="card">🖌 Logo</div></a>
+          <a href="#popup"><div class="card">📷 Photography</div></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools -->
+    <section id="tools" class="panel">
+      <div class="glass content animate">
+        <h2>Favorite Tools</h2>
+        <div class="tools-list">
+          <a href="#popup"><button>Adobe Photoshop</button></a>
+          <a href="#popup"><button>Illustrator</button></a>
+          <a href="#popup"><button>Figma</button></a>
+          <a href="#popup"><button>Canva</button></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="panel">
+      <div class="glass content animate">
+        <h2>Let’s Connect</h2>
+        <p>Follow me on socials:</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/YOUR_INSTAGRAM" target="_blank">📸 Instagram</a>
+          <a href="https://www.facebook.com/YOUR_FACEBOOK" target="_blank">📘 Facebook</a>
+          <a href="#popup">🐦 Twitter</a>
+          <a href="#popup">💼 LinkedIn</a>
+          <a href="#popup">🎥 TikTok</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <footer>
-    <p>Powered by: Raynan Medyo Pogi | Made by: Rai rai (raynan) gpt</p>
+    <p>Powered by: Raynan Marciales | Made by: Rai rai (Raynan) GPT</p>
   </footer>
 
+  <!-- Popup -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <h3>Design only, not functional.</h3>
+      <p>Prototype version, for visual demo only.</p>
+      <a href="#home">Close</a>
+      <a href="#">Okay</a>
+    </div>
+  </div>
 </body>
 </html>
