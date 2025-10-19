@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Cards - Alice in Borderland</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Extra effects for card suits */
+    .suit {
+      font-size: 50px;
+      text-shadow: 0 0 15px currentColor;
+      transition: transform 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    .card:hover .suit {
+      transform: scale(1.2);
+      text-shadow: 0 0 25px currentColor;
+    }
+
+    .spade { color: #ffffff; }
+    .heart { color: #e60026; }
+    .diamond { color: #c41e3a; }
+    .club { color: #cccccc; }
+
+    .card-title {
+      font-weight: 600;
+      margin-top: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .card-text {
+      color: #b3b3b3;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container text-center mt-5">
+    <h2>Activity 4: Responsive Card Layout ♠️♥️♦️♣️</h2>
+    <div class="row mt-4">
+
+      <!-- Spade Card -->
+      <div class="col-md-3 mb-3">
+        <div class="card p-3">
+          <div class="suit spade">♠️</div>
+          <div class="card-body">
+            <h5 class="card-title">Spade Card</h5>
+            <p class="card-text">Symbol of intelligence and challenge.</p>
+            <button class="btn btn-outline-light" onclick="alert('Prototype only!')">Explore</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Heart Card -->
+      <div class="col-md-3 mb-3">
+        <div class="card p-3">
+          <div class="suit heart">♥️</div>
+          <div class="card-body">
+            <h5 class="card-title">Heart Card</h5>
+            <p class="card-text">Symbol of emotion and compassion.</p>
+            <button class="btn btn-outline-danger" onclick="alert('Prototype only!')">Explore</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Diamond Card -->
+      <div class="col-md-3 mb-3">
+        <div class="card p-3">
+          <div class="suit diamond">♦️</div>
+          <div class="card-body">
+            <h5 class="card-title">Diamond Card</h5>
+            <p class="card-text">Symbol of power and ambition.</p>
+            <button class="btn btn-outline-light" onclick="alert('Prototype only!')">Explore</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Club Card -->
+      <div class="col-md-3 mb-3">
+        <div class="card p-3">
+          <div class="suit club">♣️</div>
+          <div class="card-body">
+            <h5 class="card-title">Club Card</h5>
+            <p class="card-text">Symbol of strength and persistence.</p>
+            <button class="btn btn-outline-danger" onclick="alert('Prototype only!')">Explore</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <p>Powered by: Raynan Marciales | Made by: Rai rai</p>
+
+</body>
+</html>
