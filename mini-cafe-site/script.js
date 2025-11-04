@@ -24,3 +24,49 @@ menuItems.forEach(item => {
   `;
   menuContainer.appendChild(card);
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const feedbackForm = document.getElementById("feedbackForm");
+  if (!feedbackForm) return;
+
+  feedbackForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+    const statusMsg = document.getElementById("statusMsg");
+    const feedbackList = document.getElementById("feedbackList");
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (name === "") {
+      statusMsg.textContent = "⚠️ Please enter your name.";
+      statusMsg.style.color = "red";
+      return;
+    }
+
+    if (!emailPattern.test(email)) {
+      statusMsg.textContent = "⚠️ Please enter a valid email address.";
+      statusMsg.style.color = "red";
+      return;
+    }
+
+    if (message.length <= 5) {
+      statusMsg.textContent = "⚠️ Feedback message must be at least 6 characters long.";
+      statusMsg.style.color = "red";
+      return;
+    }
+
+    statusMsg.textContent = "✅ Thank you for your feedback!";
+    statusMsg.style.color = "green";
+
+    const listItem = document.createElement("li");
+    listItem.className = "list-group-item";
+    listItem.innerHTML = `<strong>${name}</strong> (${email}): <br>${message}`;
+    feedbackList.appendChild(listItem);
+
+    feedbackForm.reset();
+  });
+});
