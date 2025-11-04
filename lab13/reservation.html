@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservation Form</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #fff8f2, #ffe0b2);
+      text-align: center;
+      padding: 40px;
+    }
+    form {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      display: inline-block;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    input {
+      display: block;
+      margin: 10px auto;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      width: 250px;
+    }
+    button {
+      background: #8d6e63;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #6d4c41;
+    }
+    .output {
+      margin-top: 20px;
+      background: #fff3e0;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      min-width: 280px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Reservation Form</h2>
+  <form id="reserveForm">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="date" id="date" required>
+    <input type="time" id="time" required>
+    <input type="number" id="guests" placeholder="Number of Guests" required>
+    <button type="submit">Reserve</button>
+  </form>
+
+  <div class="output" id="output"></div>
+
+  <script>
+    document.getElementById("reserveForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      let name = document.getElementById("name").value;
+      let date = document.getElementById("date").value;
+      let time = document.getElementById("time").value;
+      let guests = document.getElementById("guests").value;
+
+      if (name && date && time && guests) {
+        document.getElementById("output").innerHTML =
+          `<h4>Reservation Confirmed!</h4>
+          <p>Name: ${name}</p>
+          <p>Date: ${date}</p>
+          <p>Time: ${time}</p>
+          <p>Guests: ${guests}</p>`;
+      } else {
+        alert("Please fill all fields!");
+      }
+    });
+  </script>
+  
+</body>
+</html>

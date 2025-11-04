@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form Array</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fdfcfb;
+      text-align: center;
+      padding: 40px;
+    }
+    form {
+      background: #fff;
+      border-radius: 10px;
+      display: inline-block;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    input, textarea {
+      width: 250px;
+      margin: 10px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    ul {
+      margin-top: 20px;
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background: #f1f1f1;
+      border-radius: 8px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Contact Form with Array Storage</h2>
+  <form id="contactForm">
+    <input type="text" id="name" placeholder="Your Name" required><br>
+    <textarea id="message" placeholder="Your Message" required></textarea><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <ul id="messageList"></ul>
+
+  <script>
+    let contacts = [];
+
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      let name = document.getElementById("name").value;
+      let message = document.getElementById("message").value;
+
+      contacts.push({ name, message });
+
+      let list = document.getElementById("messageList");
+      list.innerHTML = "";
+
+      contacts.forEach(c => {
+        let li = document.createElement("li");
+        li.textContent = `${c.name}: ${c.message}`;
+        list.appendChild(li);
+      });
+
+      this.reset();
+    });
+  </script>
+  
+</body>
+</html>

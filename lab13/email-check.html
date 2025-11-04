@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Validator</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f7f9fa;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 100px;
+    }
+    form {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    input {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      width: 250px;
+    }
+    button {
+      margin-top: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .message { margin-top: 15px; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <h2>Email Format Validator</h2>
+  <form id="emailForm">
+    <input type="text" id="email" placeholder="Enter your email">
+    <button type="submit">Submit</button>
+  </form>
+
+  <div class="message" id="result"></div>
+
+  <script>
+    document.getElementById("emailForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      let email = document.getElementById("email").value;
+      let result = document.getElementById("result");
+
+      if (email.includes("@") && email.includes(".")) {
+        result.textContent = "✅ Email accepted!";
+        result.style.color = "green";
+      } else {
+        result.textContent = "❌ Invalid email format!";
+        result.style.color = "red";
+      }
+    });
+  </script>
+
+</html>
