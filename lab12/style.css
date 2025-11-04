@@ -1,0 +1,88 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #f3f8ff, #d7e3fc);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+
+.container {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 18px;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 80%;
+  max-width: 500px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+h1, h2 {
+  color: #0d3b66;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: #f0f4f8;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+li:hover {
+  background: #cce3ff;
+  transform: scale(1.05);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  animation: slideUp 1s ease;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+th {
+  background-color: #eaf2ff;
+}
+
+button, select {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #0077b6;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover, select:hover {
+  background-color: #023e8a;
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

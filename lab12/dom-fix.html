@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Activity 2 - Error Identification</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 id="title">Welcome!</h1>
+    <button onclick="changeTitle()">Change Title</button>
+    <p>Open the browser console to see the output.</p>
+    <p>Prototype only: Developing version</p>
+  </div>
+
+  <script>
+    function changeTitle() {
+      document.getElementById("title").innerHTML = "Updated!";
+      console.log("Title successfully changed!");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Activity 5 - Color Changer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Dynamic Background Changer</h2>
+    <select id="colorSelect">
+      <option value="#ffffff">White</option>
+      <option value="#aee6ff">Light Blue</option>
+      <option value="#baffc9">Light Green</option>
+      <option value="#ffd6a5">Peach</option>
+    </select>
+    <button id="changeColor">Change Background</button>
+  </div>
+
+  <script>
+    document.getElementById("changeColor").onclick = function() {
+      const color = document.getElementById("colorSelect").value;
+      document.body.style.background = color;
+    };
+  </script>
+
+ 
+</body>
+</html>
