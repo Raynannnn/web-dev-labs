@@ -1,83 +1,98 @@
+/* Overall layout */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
-  color: #fff;
-  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #000000);
-  background-size: 400% 400%;
-  animation: gradientBG 12s ease infinite;
+  background: linear-gradient(135deg, #e3f2fd, #ffffff);
+  color: #03396c;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* Background Animation */
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
+/* Header */
 header {
-  background: #111;
-  color: #0ff;
+  background: #1565c0;
+  color: white;
   text-align: center;
-  padding: 20px;
-  box-shadow: 0 0 20px #0ff;
+  padding: 4px 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  animation: fadeDown 0.6s ease;
+}
+
+@keyframes fadeDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 header h2 {
   margin: 0;
-  font-size: 2em;
-  letter-spacing: 2px;
-  text-shadow: 0 0 10px #0ff, 0 0 20px #00f;
+  font-size: 1.6em;
+  letter-spacing: 1px;
 }
 
 header p {
   font-size: 0.9em;
-  color: #aaf;
+  opacity: 0.9;
 }
 
-header a {
-  color: #0ff;
-  text-decoration: none;
-}
-
-header a:hover {
-  color: #fff;
-  text-shadow: 0 0 10px #0ff;
-}
-
+/* Container Layout */
 .container {
   display: flex;
-  height: 90vh;
+  flex: 1;
+  overflow: hidden;
+  margin-top: 95px; /* Adjusted para di matabunan ng header */
+  transition: margin-top 0.3s ease;
 }
 
 /* Sidebar */
 .sidebar {
-  width: 22%;
-  background: rgba(20, 20, 20, 0.9);
+  width: 23%;
+  background: #f6f9ff;
   padding: 20px;
   box-sizing: border-box;
-  border-right: 1px solid #333;
+  border-right: 2px solid #cfe0f5;
   overflow-y: auto;
+  transition: background 0.3s ease, width 0.3s ease;
 }
 
 .sidebar h3 {
+  color: #0d47a1;
   margin-top: 0;
-  color: #0ff;
-  text-shadow: 0 0 5px #0ff;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 
-/* Card swipe effect sa links */
+/* Sidebar Links */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .sidebar a {
   display: block;
   text-decoration: none;
-  color: #ccc;
+  color: #1565c0;
+  background: white;
   padding: 10px 15px;
   margin: 8px 0;
-  border-radius: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 80, 200, 0.1);
+  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  transition: color 0.3s ease;
-  background: #111;
-  box-shadow: 0 0 5px #000;
 }
 
 .sidebar a::before {
@@ -87,8 +102,8 @@ header a:hover {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(0,255,255,0.3), transparent);
-  transition: all 0.4s ease;
+  background: linear-gradient(120deg, transparent, rgba(21, 101, 192, 0.3), transparent);
+  transition: left 0.4s ease;
 }
 
 .sidebar a:hover::before {
@@ -96,33 +111,51 @@ header a:hover {
 }
 
 .sidebar a:hover {
-  color: #0ff;
-  box-shadow: 0 0 10px #0ff;
+  background: #1565c0;
+  color: white;
+  box-shadow: 0 4px 12px rgba(21, 101, 192, 0.3);
+  transform: translateX(6px);
 }
 
-/* Nested UL */
-.sidebar ul {
-  list-style: none;
-  padding-left: 0;
-}
-
+/* Nested list for activities */
 .sidebar li ul {
   margin-left: 10px;
-  padding-left: 0px;
-  border-left: 2px solid #333;
+  border-left: 2px solid #cfe0f5;
+  padding-left: 10px;
 }
 
+/* Content Area */
 .content {
-  width: 78%;
-  padding: 15px;
+  width: 77%;
+  background: #ffffff;
   box-sizing: border-box;
-  background: rgba(0, 0, 0, 0.7);
-  border-left: 1px solid #333;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 iframe {
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 130px); /* para di ma-overlap ng header */
   border: none;
   border-radius: 12px;
+  box-shadow: 0 0 15px rgba(21, 101, 192, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+iframe:hover {
+  box-shadow: 0 0 20px rgba(21, 101, 192, 0.25);
+}
+
+/* Scrollbar Style */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background: #90caf9;
+  border-radius: 10px;
+}
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #64b5f6;
 }
